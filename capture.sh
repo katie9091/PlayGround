@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cd "$(dirname "$0")"
-/usr/bin/time -p node "${RUNTIME_DIR:?}/scripts/default-capture.mjs"
+
+PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$PROJECT_DIR"
+/usr/bin/time -p node "$PROJECT_DIR/scripts/capture.mjs"
