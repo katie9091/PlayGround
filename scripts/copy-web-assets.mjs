@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 
 const root = process.cwd();
 const webDir = resolve(root, 'www');
-const assets = ['index.html', 'app.js', 'style.css'];
+const assets = ['index.html', 'game.css', 'game.js', 'studio.html', 'app.js', 'style.css'];
 
 await rm(webDir, { recursive: true, force: true });
 await mkdir(webDir, { recursive: true });
